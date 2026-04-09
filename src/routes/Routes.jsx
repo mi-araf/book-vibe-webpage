@@ -3,6 +3,7 @@ import MainLayout from '../layout/MainLayout.jsx'
 import Homepage from '../pages/homepage/Homepage.jsx'
 import Books from '../pages/books/Books.jsx'
 import ErrorPage from '../pages/ErrorPage/ErrorPage.jsx';
+import BookDetails from '../pages/BookDetails/BookDetails.jsx';
 
 export const router = createBrowserRouter([
 	{
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
 				path: '/books',
 				element: <Books />
 			},
+            {
+                path: '/bookDetails/:id',
+                Component: <BookDetails />
+            },
 		],
         errorElement: <ErrorPage />
 	},
