@@ -5,9 +5,12 @@ import App from './App.jsx'
 import './App.css'
 import { Router, RouterProvider } from 'react-router'
 import { router } from './routes/Routes.jsx'
+import BookProvider from './context/BookContext.jsx'
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
-		<RouterProvider router={router} />,
+		<BookProvider>
+			<RouterProvider router={router} />
+		</BookProvider>
 	</StrictMode>,
 )
